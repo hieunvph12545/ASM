@@ -83,7 +83,6 @@ router.post('/',function (req,res){
         if(err){
           res.render('index',{title:'Express :err'})
         }else {
-          res.send({token})
           res.redirect('./trangchu')
         }
       })
