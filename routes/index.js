@@ -86,11 +86,6 @@ router.post('/',function (req,res){
           res.send({token})
           res.redirect('./trangchu')
         }
-      }).then(data =>{
-        console.log(data)
-        res.send(data)
-      }).catch(err => {
-        console.log(err)
       })
     }
   });
