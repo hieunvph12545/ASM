@@ -188,11 +188,11 @@ router.post('/update',(req,res) =>{
   })
 })
 
-router.post("/users", async (req, res) => {
+router.post("/users",  (req, res) => {
   var userConnect=db.model('users',user);
   const u = new userConnect(req.body);
   try {
-    await u.save();
+     u.save();
     res.send(u);
   } catch (error) {
     res.status(500).send(error);
